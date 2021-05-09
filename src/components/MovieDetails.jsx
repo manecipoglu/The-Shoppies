@@ -7,7 +7,7 @@ export default function MovieDetails({ imdbID }) {
 
   useEffect(() => {
     fetch(
-      `http://www.omdbapi.com/?i=${imdbID}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
+      `https://www.omdbapi.com/?i=${imdbID}&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
     )
       .then(res => res.json())
       .then(data => setMovie(data));
