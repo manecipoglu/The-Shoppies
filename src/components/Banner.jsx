@@ -31,6 +31,11 @@ function Banner({ nominees, setNominees }) {
             content="Should you decide to change your list, simply remove the existing nominees to add new ones."
           />
         )}
+        {nominees.length === 0 && (
+          <h1 style={{ textAlign: "center" }}>
+            USE THE SEARCHBAR TO FIND MOVIES!
+          </h1>
+        )}
       </div>
       <div style={{ height: "420px" }}>
         <section className="cards">
