@@ -1,3 +1,8 @@
+The hosted version can be reached via this link: [The Shoppies](https://manecipoglu.github.io/TheShoppies) or at https://manecipoglu.github.io/TheShoppies
+
+# How to use
+npm start command will launch a development server on localhost:3000.
+
 # Introduction
 
 This project was made with React utilizing OMDB api. create-react-app bundler is used for easy configuration. Since this is a study case, the api key is stored in a .env file. Please beware that this does not properly hide the api key, and that it is exposed in the dev tools. Therefore, in a real app a safer approach would be to store the api key on key server side.
