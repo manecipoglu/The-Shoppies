@@ -10,8 +10,11 @@ function Search({ loadMovies }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (input.length === 0) return;
-    loadMovies(input);
+    const searchBar = new FormData(e.target).get("searchBar");
+    if (!searchBar || searchBar === input) return;
+
+    setInput(searchBar);
+    loadMovies(searchBar);
   }
 
   return (
@@ -26,8 +29,8 @@ function Search({ loadMovies }) {
             labelPosition: "right",
           }}
           fluid
-          onChange={e => setInput(e.target.value)}
           placeholder="Search movies by title"
+          name="searchBar"
         />
       </form>
     </section>

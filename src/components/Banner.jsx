@@ -37,7 +37,7 @@ function Banner({ nominees, setNominees }) {
           </h1>
         )}
       </div>
-      <div style={{ height: "420px" }}>
+      <div className="banner">
         <section className="cards">
           {[0, 1, 2, 3, 4].map(index =>
             nominees[index] ? (
@@ -47,6 +47,7 @@ function Banner({ nominees, setNominees }) {
               />
             ) : (
               <Placeholder
+                key={index + "placeholder"}
                 id="nmf"
                 inverted
                 style={{
